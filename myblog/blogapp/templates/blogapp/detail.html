@@ -1,0 +1,16 @@
+{% extends 'blogapp/base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <title>My Blog</title>
+
+    <h1>Blog List</h1>
+    <br><br>
+    
+    <h3> 제목: {{ blog.title }} </h3>
+    <p> 날짜: {{ blog.pub_date }} </p>
+    <p> 자세한 본문: {{ blog.body }}</p>
+    <hr>
+
+{% endblock %}

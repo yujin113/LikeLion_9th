@@ -1,0 +1,18 @@
+{% extends 'blogapp/base.html' %}
+
+{% block content %}
+{% load static %}
+
+    <title>My Blog</title>
+
+    <h1>Blog List</h1>
+    <br><br>
+    
+    {% for blog in blogs.all %}
+        <h3> 제목: {{ blog.title }} </h3>
+        <p> 날짜: {{ blog.pub_date }} </p>
+        <p> 본문 미리보기: {{ blog.summary }} <a href="{% url 'detail' blog.id %}">...more</a></p>
+        <hr>
+    {% endfor %}
+
+{% endblock %}
